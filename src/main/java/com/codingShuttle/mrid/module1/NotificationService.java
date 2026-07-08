@@ -1,2 +1,7 @@
-package com.codingShuttle.mrid.module1;public class NotificationService {
+package com.codingShuttle.mrid.module1;
+
+
+public interface NotificationService {
+
+      void send(String message);
 }

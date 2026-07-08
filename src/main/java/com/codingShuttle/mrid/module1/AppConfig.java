@@ -11,7 +11,7 @@ import java.beans.BeanProperty;
 public class AppConfig {
 
     @Bean
-    @Scope("prototype")
+    @Scope("prototype")// can be of different types as well
     public PaymentService paymentService(){
         return new PaymentService(2);
     }
