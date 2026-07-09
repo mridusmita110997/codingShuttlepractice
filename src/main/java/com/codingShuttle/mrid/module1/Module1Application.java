@@ -21,7 +21,7 @@ public class Module1Application implements CommandLineRunner{
 //	@Autowired Removed and done constructor injection
 	NotificationService notificationService; //field dependency injection we should avoid this
 
-	public Module1Application (@Qualifier("emailNotif") NotificationService notificationService){
+	public Module1Application (NotificationService notificationService){
 		this.notificationService =  notificationService ; // qualifier added to override the primary
 	}
 
@@ -43,7 +43,7 @@ public class Module1Application implements CommandLineRunner{
 
 //		NotificationService notificationService = new EmailNotificationService();
 		//
-		notificationService.send("Hello"); // output sms notif as its primary if used without qualifier
+		notificationService.send("Hello"); // output sms notif application property has this and conditional load added
 //O.P the primary bean will be picked
 	}
 }
